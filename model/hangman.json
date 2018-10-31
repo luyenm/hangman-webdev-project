@@ -1,0 +1,44 @@
+{
+  "dictionary" : [
+    {
+      "word": "dictionary",
+      "definition" : "Used to find words"
+    },
+    {
+      "word": "joe",
+      "definition" : "An ordinary man"
+    },
+    {
+      "word": "dichotomy",
+      "definition" : "A contrast between two things"
+    },
+    {
+      "word": "definition",
+      "definition" : "Description of a word"
+    },
+    {
+      "word": "standard",
+      "definition" : "Accepted norms"
+    },
+    {
+      "word" : "flag",
+      "definition" : "Represents a country"
+    },
+    {
+      "word" : "aries",
+      "definition" : "An astrological sign"
+    },
+    {
+      "word" : "computer",
+      "definition" : "An electronic device that takes an input and provides an output"
+    },
+    {
+      "word" : "systems",
+      "definition" : "Connected parts that create a whole."
+    },
+    {
+      "word" : "technology",
+      "definition" : "Application of scientific knowledge into everyday life"
+    }
+  ]
+}
