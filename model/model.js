@@ -4,7 +4,7 @@ let user = {
 };
 
 function saveScore() {
-    $.post("/hangman.html", {"instruction" : "fetch"}, (stuff) => {
+    $.post("/index.html", {"instruction" : "fetch"}, (stuff) => {
 
     });
 }
