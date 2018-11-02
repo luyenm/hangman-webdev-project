@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="hangman.css">
 </head>
 <body class="text-center">
+<div id="user">
+</div>
 <h3>User Score: <span id="user-score">0</span></h3>
 <img id="hangman" src="images/base.png">
 <div id="word-container"><h1 id="guess-word"></h1></div>
@@ -18,6 +20,7 @@
     <div class="btn-toolbar" id ="keyboard">
     </div>
     <div><h1 id="victory-condition"></h1></div>
+    <button id="submit-button" class = 'btn btn-primary'>Submit Score</button>
     <button  id="reset-button"class="btn btn-danger" onclick="resetGame()">Reset</button>
 </div>
 </body>
