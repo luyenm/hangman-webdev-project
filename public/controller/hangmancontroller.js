@@ -37,7 +37,7 @@ function guess(input) {
             document.getElementById('hangman').src = images[lossPoints];
         }
         else {
-            document.getElementById('hangman').src = "images/hangman.png";
+            document.getElementById('hangman').src = "public/images/hangman.png";
             lose();
         }
     }
@@ -48,7 +48,7 @@ function guess(input) {
 // Secondary functionality will count the letters in the word and generate
 // the corresponding number of underscores.
 function getRandomWord() {
-    $.getJSON('model/hangman.json', function(data) {
+    $.getJSON('public/model/hangman.json', function(data) {
         let index = parseInt(Math.random() * data.dictionary.length);
         gameWord = data.dictionary[index].word;
         console.log(gameWord);

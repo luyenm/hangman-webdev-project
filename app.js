@@ -1,22 +1,29 @@
 // const functions = require('firebase-functions');
+const express = require('express');
+const app = express();
 
-var http = require('http'),
+const firebase = require('firebase');
+
+
+const http = require('http'),
     fs = require('fs');
-var port = process.env.PORT || 3000;
-http.createServer(function(req, res) {
-    var url = './' + (req.url == '/' ? 'hangman.html' : req.url);
-    fs.readFile(url, function(err, html) {
-        if (err) {
-            var message404 = "There is no such page! <a href='/'>Back to home page</a>"
-            res.writeHead(404, {'Content-Type': 'text/html', 'Content-Length': message404.length})
-            res.write(message404)
-        } else {
-            res.writeHead(200, {'Content-Type': 'text/html', 'Content-Length': html.length})
-            res.write(html)
-        }
-        res.end()
-    })
-}).listen(port);
+const port = process.env.PORT || 3000;
+//
+// http.createServer(function(req, res) {
+//     var url = './' + (req.url === '/' ? 'hangman.html' : req.url);
+//     fs.readFile(url, function(err, html) {
+//         if (err) {
+//             var message404 = "There is no such page! <a href='/'>Back to home page</a>"
+//             res.writeHead(404, {'Content-Type': 'text/html', 'Content-Length': message404.length})
+//             res.write(message404)
+//         } else {
+//             res.writeHead(200, {'Content-Type': 'text/html', 'Content-Length': html.length})
+//             res.write(html)
+//         }
+//         res.end()
+//     })
+// })
+
 
 // // Create and Deploy Your First Cloud Functions
 // // https://firebase.google.com/docs/functions/write-firebase-functions
@@ -25,9 +32,7 @@ http.createServer(function(req, res) {
 //  response.send("Hello from Firebase!");
 // });
 
-const express = require('express');
-const app = express();
-const firebase = require('firebase');
+
 
 const config = {
     apiKey: "AIzaSyDfn03oIIrJiBFyuQ7WY22YJem1USHo_kE",
@@ -47,8 +52,15 @@ let authentication = firebase.auth();
 //     let errorMessage = error.message;
 // });
 
+function firebaseLogin(email, password) {
 
-app.post("/index.html", (request, res) => {
+}
+
+function getUserScore() {
+
+}
+
+app.post("/hangman.html", (request, res) => {
     let req = request.body;
     if (req.instruction === "fetch") {
 
@@ -57,6 +69,16 @@ app.post("/index.html", (request, res) => {
     }
 });
 
-function storeScore(userScore, userName) {
+app.get('/api/stuff', (req, res) => {
+    res.send("Hello World ");
+});
 
-}
+app.use("/public", express.static(__dirname + "/public"));
+
+app.get('/', function(req, res) {
+    res.sendFile(__dirname + "/" + "hangman.html");
+});
+
+app.listen(port, () => {
+   console.log("Listening on port 3000");
+});

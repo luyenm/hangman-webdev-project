@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/luyenm/hangman-webdev-project#readme",
   "dependencies": {
+    "ejs": "^2.6.1",
     "express": "^4.16.4",
     "firebase": "^5.5.7"
   }

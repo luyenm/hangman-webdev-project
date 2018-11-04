@@ -1,13 +1,13 @@
 // Instantiation for image sources.
 let images = [
-    "images/base.png",
-    "images/noose.png",
-    "images/head.png",
-    "images/body.png",
-    "images/rightleg.png",
-    "images/leftleg.png",
-    "images/rightarm.png",
-    "images/hangman.png",
+    "public/images/base.png",
+    "public/images/noose.png",
+    "public/images/head.png",
+    "public/images/body.png",
+    "public/images/rightleg.png",
+    "public/images/leftleg.png",
+    "public/images/rightarm.png",
+    "public/images/hangman.png"
 ];
 
 // Instantiations for the letter that are going to be compared.
