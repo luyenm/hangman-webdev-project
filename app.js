@@ -79,6 +79,12 @@ app.get('/', function(req, res) {
     res.sendFile(__dirname + "/" + "hangman.html");
 });
 
+app.get('/signup.html', (req, res) => {
+   res.sendFile(__dirname + "/" + "signup.html");
+});
+
+
+
 app.listen(port, () => {
    console.log("Listening on port 3000");
 });
